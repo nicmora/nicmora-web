@@ -28,35 +28,32 @@ a {
 
 .navbar__container {
   display: flex;
-  flex-flow: row wrap;
-  align-items: center;
   justify-content: space-between;
-  height: 65px;
+  align-items: center;
+  flex-flow: row wrap;
+  margin: 0 40px;
 }
 
 .navbar__brand {
-  padding: 0 20px;
   color: #00cec9;
+  padding: 15px 10px;
 }
 
-.navbar__brand > img,
-b {
-  padding: 0 10px;
+.navbar__brand > b {
+  padding-left: 10px;
 }
 
 .navbar__list {
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
   align-items: center;
-  justify-content: space-around;
-}
-
-.navbar__item {
-  padding: 0 20px;
 }
 
 .navbar__item > a {
   color: #00cec9;
+  padding: 10px;
+  border-radius: 3px;
 }
 
 .navbar__item > a:hover {
