@@ -20,10 +20,19 @@ a {
   text-decoration: none;
 }
 
+/* CSS Grid */
+/* .grid {
+  display: grid;
+  grid-template-areas: 
+  "navbar navbar navbar"
+  "header header header"
+  "";
+} */
+
 /* Navigation */
 .navbar {
   background-color: rgba(45, 52, 54, 0.85);
-  font-size: 1.2rem; /*checkear*/
+  font-size: 1rem; /*checkear*/
 }
 
 .navbar__container {
@@ -31,7 +40,7 @@ a {
   justify-content: space-between;
   align-items: center;
   flex-flow: row wrap;
-  margin: 0 40px;
+  margin: 0 100px;
 }
 
 .navbar__brand {
@@ -59,4 +68,22 @@ a {
 .navbar__item > a:hover {
   background-color: #00cec9;
   color: #2d3436;
+}
+
+/* About me */
+.about {
+  height: 100vh;
+}
+
+.about__container {
+  position: relative;
+  top: 40%;
+  padding: 30px;
+  text-align: center;
+}
+
+.about__title {
+}
+
+.about__desc {
 }
