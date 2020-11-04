@@ -20,6 +20,12 @@ a {
   text-decoration: none;
 }
 
+:root {
+  --bg-color: rgba(34, 47, 62, 0.85);
+  --txt-color: rgba(0, 210, 211, 1);
+  --txt-color-snd: rgba(200, 214, 229, 1);
+}
+
 /* CSS Grid */
 /* .grid {
   display: grid;
@@ -31,8 +37,12 @@ a {
 
 /* Navigation */
 .navbar {
-  background-color: rgba(45, 52, 54, 0.85);
-  font-size: 1rem; /*checkear*/
+  /* background-color: rgba(34, 47, 62, 0); */
+  font-size: 1rem;
+  font-weight: bold;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
 }
 
 .navbar__container {
@@ -44,7 +54,7 @@ a {
 }
 
 .navbar__brand {
-  color: #00cec9;
+  color: var(--txt-color);
   padding: 15px 10px;
 }
 
@@ -60,22 +70,23 @@ a {
 }
 
 .navbar__item > a {
-  color: #00cec9;
+  color: var(--txt-color);
   padding: 10px;
   border-radius: 3px;
 }
 
 .navbar__item > a:hover {
-  background-color: #00cec9;
-  color: #2d3436;
+  background-color: var(--txt-color);
+  color: var(--bg-color);
 }
 
 /* About me */
 .about {
   height: 100vh;
-  background:url(/img/header-background.jpg);
-  background-size:cover;
-  box-shadow:inset 0 0 0 2000px rgba(87, 101, 116, 0.8);
+  background: url(/img/header-background.jpg);
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px var(--bg-color);
+  color: var(--txt-color-snd);
 }
 
 .about__container {
@@ -87,10 +98,12 @@ a {
 
 .about__title {
   font-size: 3rem;
+  text-shadow: 5px 3px 15px var(--txt-color);
 }
 
 .about__desc {
-  font-size: 1rem;
+  font-size: 1.1rem;
+  text-shadow: 5px 3px 15px;
 }
 
 /* Skills */
