@@ -73,6 +73,9 @@ a {
 /* About me */
 .about {
   height: 100vh;
+  background:url(/img/header-background.jpg);
+  background-size:cover;
+  box-shadow:inset 0 0 0 2000px rgba(87, 101, 116, 0.8);
 }
 
 .about__container {
