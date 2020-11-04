@@ -77,13 +77,40 @@ a {
 
 .about__container {
   position: relative;
-  top: 40%;
-  padding: 30px;
+  top: 25%;
+  padding: 100px;
   text-align: center;
 }
 
 .about__title {
+  font-size: 3rem;
 }
 
 .about__desc {
+  font-size: 1rem;
+}
+
+/* Skills */
+.skills {
+  height: 100vh;
+}
+
+/* Projects */
+.projects {
+  height: 100vh;
+}
+
+/* Experience */
+.experience {
+  height: 100vh;
+}
+
+/* Contact */
+.contact {
+  height: 100vh;
+}
+
+/* Footer */
+.footer {
+  height: 100vh;
 }
