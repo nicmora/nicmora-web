@@ -25,6 +25,13 @@
       rel="stylesheet"
     />
 
+    <!-- Splide -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.14/dist/css/themes/splide-sea-green.min.css"
+    />
+
     <!-- Custom css -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -37,19 +44,19 @@
           <a class="navbar__brand" href=""><i class="fas fa-balance-scale"></i><b>Nicolás Morales</b></a>
           <ul class="navbar__list">
             <li class="navbar__item">
-              <a class="navbar__link" href="#">Sobre mi</a>
+              <a class="navbar__link" href="#about">Sobre mi</a>
             </li>
             <li class="navbar__item">
-              <a class="navbar__link" href="#">Habilidades</a>
+              <a class="navbar__link" href="#skills">Habilidades</a>
             </li>
             <li class="navbar__item">
-              <a class="navbar__link" href="#">Proyectos</a>
+              <a class="navbar__link" href="#projects">Proyectos</a>
             </li>
             <li class="navbar__item">
-              <a class="navbar__link" href="#">Experiencia</a>
+              <a class="navbar__link" href="#experience">Experiencia</a>
             </li>
             <li class="navbar__item">
-              <a class="navbar__link" href="#">Contacto</a>
+              <a class="navbar__link" href="#contact">Contacto</a>
             </li>
           </ul>
         </div>
@@ -57,7 +64,7 @@
     </header>
 
     <!-- Sobre mi -->
-    <section class="about">
+    <section class="about" id="about">
       <div class="about__container">
         <h1 class="about__title">
           Ingeniero en Sistemas de Información
@@ -76,25 +83,42 @@
     </section>
 
     <!-- Habilidades -->
-    <section class="skills">
-      Java, Spring Framework, Struts, Hibernate, Oracle SQL, Angular, TypeScript, Jquery, Javascript, HTML, CSS, Maven,
-      Jenkins, Stash, Artifactory, Jboss EAP, SOAP, REST. Scrum, Kanban.
+    <section class="skills" id="skills">
+      <h2>Habilidades</h2>
     </section>
 
     <!-- Proyectos -->
-    <section class="projects">
-      <h3>Smappio</h3>
-      <p>
-        Smart Electronic Wireless Sthethoscope Descripción del proyecto Wireless electronic sthetoscope developed by
-        using Adafruit Feather Huzzah ESP32 module along with Adafruit I2S SPH0645 to capture body sounds (heart and
-        lungs mainly). The HW folder contains all the C/C++ (Arduino) for the hardware, and the SW contains two clients
-        projects that connects via WiFi to the device. Those project were develop with .NET Winforms and Android
-        respectivly. This project was presented in the current congress CoNaIISI 2018 in Mar Del Plata.
-      </p>
+    <section class="projects" id="projects">
+      <h2>Proyectos</h2>
+      <div class="smappio">
+        <div class="smappio__description">
+          <h3>Smappio</h3>
+          <small>Smart Electronic Wireless Sthethoscope</small>
+          <p>
+            Descripción del proyecto Wireless electronic sthetoscope developed by using Adafruit Feather Huzzah ESP32
+            module along with Adafruit I2S SPH0645 to capture body sounds (heart and lungs mainly). The HW folder
+            contains all the C/C++ (Arduino) for the hardware, and the SW contains two clients projects that connects
+            via WiFi to the device. Those project were develop with .NET Winforms and Android respectivly. This project
+            was presented in the current congress CoNaIISI 2018 in Mar Del Plata.
+          </p>
+        </div>
+
+        <div class="splide smappio__slider">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide"><img src="/img/slider/slider1.jpg" alt="" /></li>
+              <li class="splide__slide"><img src="/img/slider/slider2.jpg" alt="" /></li>
+              <li class="splide__slide"><img src="/img/slider/slider3.jpg" alt="" /></li>
+              <li class="splide__slide"><img src="/img/slider/slider4.jpg" alt="" /></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Experiencia -->
-    <section class="experience">
+    <section class="experience" id="experience">
+      <h2>Experiencia</h2>
       <h3><img src="" alt="" /><img src="" alt="" />Telecom/Cablevisión</h3>
       <p>Responsabilidades:</p>
       <ul>
@@ -107,7 +131,8 @@
     </section>
 
     <!-- Contacto -->
-    <section class="contact">
+    <section class="contact" id="contact">
+      <h2>Contacto</h2>
       <form>
         <input type="text" name="" id="" placeholder="Nombre y Apellido" />
         <input type="email" name="" id="" placeholder="Email" />
@@ -117,6 +142,41 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">footer</footer>
+    <footer class="footer">
+      <div class="footer__contariner">
+        <a class="footer__brand" href=""><i class="fas fa-balance-scale"></i><b>Nicolás Morales</b></a>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href=""><i class="fab fa-google-plus-square"></i></a>
+          </li>
+          <li class="footer__item">
+            <a href=""><i class="fab fa-linkedin"></i></a>
+          </li>
+          <li class="footer__item">
+            <a href=""><i class="fab fa-facebook-square"></i></a>
+          </li>
+          <li class="footer__item">
+            <a href=""><i class="fab fa-twitter-square"></i></a>
+          </li>
+          <li class="footer__item">
+            <a href=""><i class="fab fa-github-square"></i></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Script Splider -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script>
+      new Splide(".splide", {
+        type: "loop",
+        rewind: true,
+        perPage: 1,
+        autoplay: true,
+        height: "35rem",
+        width: "30rem",
+        cover: true,
+      }).mount();
+    </script>
   </body>
 </html>
