@@ -4,9 +4,9 @@
   --navbar-bg-color: rgba(34, 47, 62, 1);
   --navbar-txt-color: rgba(0, 210, 211, 1);
 
-  /* --header-bg-color: rgba(34, 47, 62, 0.85);
+  --header-bg-color: rgba(34, 47, 62, 0.85);
   --header-txt-color: rgba(0, 210, 211, 1);
-  --header-txt-color-snd: rgba(200, 214, 229, 1); */
+  --header-txt-color-snd: rgba(200, 214, 229, 1);
 
   /* --card-bg-color: rgba(200, 214, 229, 1); */
 }
@@ -71,6 +71,10 @@ a:hover {
   font-size: 1.2rem;
 }
 
+.navbar-brand > a > i {
+  padding-right: 10px;
+}
+
 .navbar-toggle {
   order: 1;
   margin-left: auto;
@@ -97,7 +101,7 @@ a:hover {
 
 /********** About me **********/
 
-/* .about-background {
+.about-background {
   position: absolute;
   top: 0;
   right: 0;
@@ -114,19 +118,20 @@ a:hover {
 .about {
   height: 100vh;
   display: flex;
-  align-items: center;
+  flex-flow: column wrap;
   justify-content: center;
+  align-items: center;
 }
 
 .about-title {
-  font-size: 3rem;
+  font-size: 1.1rem;
   color: var(--header-txt-color-snd);
   text-align: center;
   text-shadow: 5px 3px 15px var(--header-txt-color);
 }
 
 .about-desc {
-  font-size: 1.1rem;
+  font-size: 0.7rem;
   color: var(--header-txt-color-snd);
   text-align: center;
   text-shadow: 5px 3px 15px;
@@ -207,6 +212,8 @@ a:hover {
 
 /* Desktop menu */
 @media all and (min-width: 900px) {
+  /********** Navigation **********/
+
   .navbar-item {
     display: block;
     width: auto;
@@ -214,5 +221,15 @@ a:hover {
 
   .navbar-toggle {
     display: none;
+  }
+
+  /********** About me **********/
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-desc {
+    font-size: 1rem;
   }
 }
