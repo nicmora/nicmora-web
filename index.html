@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Nicmora Web</title>
 
     <!-- Normalize css -->
     <!-- <link
@@ -26,11 +26,11 @@
     />
 
     <!-- Splide -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.14/dist/css/themes/splide-sea-green.min.css"
-    />
+    /> -->
 
     <!-- Custom css -->
     <link rel="stylesheet" href="css/style.css" />
@@ -40,33 +40,38 @@
     <!-- Navigation -->
     <header>
       <nav class="navbar">
-        <div class="navbar__container">
-          <a class="navbar__brand" href=""><i class="fas fa-balance-scale"></i><b>Nicolás Morales</b></a>
-          <ul class="navbar__list">
-            <li class="navbar__item">
-              <a class="navbar__link" href="#about">Sobre mi</a>
-            </li>
-            <li class="navbar__item">
-              <a class="navbar__link" href="#skills">Habilidades</a>
-            </li>
-            <li class="navbar__item">
-              <a class="navbar__link" href="#projects">Proyectos</a>
-            </li>
-            <li class="navbar__item">
-              <a class="navbar__link" href="#experience">Experiencia</a>
-            </li>
-            <li class="navbar__item">
-              <a class="navbar__link" href="#contact">Contacto</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="navbar-list">
+          <li class="navbar-brand">
+            <a href="#"><i class="fas fa-balance-scale"></i>Nicolás Morales</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#about">Sobre mi</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#skills">Habilidades</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#projects">Proyectos</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#experience">Experiencia</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#contact">Contacto</a>
+          </li>
+          <li class="navbar-toggle">
+            <a href="#"><i class="fas fa-bars"></i></a>
+          </li>
+        </ul>
       </nav>
     </header>
 
     <!-- Sobre mi -->
-    <section class="about" id="about">
-      <div class="about__container">
-        <h1 class="about__title">
+    <!-- <div class="about-background"></div>
+
+    <section class="about">
+      <div class="container">
+        <h1 class="about-title">
           Ingeniero en Sistemas de Información
           <br />
           Desarrollador Fullstack
@@ -74,13 +79,13 @@
           Java
         </h1>
         <br />
-        <p class="about__desc">
+        <p class="about-desc">
           Soy argentino y me gradué en la Universidad Tecnológica Nacional - Facultad Regional Buenos Aires (UTN-FRBA).
           Tengo 6 años de experiencia en el desarrollo fullstack y diseño de aplicaciones web para empresas en el país.
           En mis proyectos utilizo Java, Javascript, HTML, CSS y frameworks relacionados.
         </p>
       </div>
-    </section>
+    </section> -->
 
     <!-- Habilidades -->
     <section class="skills" id="skills">
@@ -88,7 +93,7 @@
     </section>
 
     <!-- Proyectos -->
-    <section class="projects" id="projects">
+    <!-- <section class="projects" id="projects">
       <h2>Proyectos</h2>
       <div class="smappio">
         <div class="smappio__description">
@@ -114,10 +119,10 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Experiencia -->
-    <section class="experience" id="experience">
+    <!-- <section class="experience" id="experience">
       <h2>Experiencia</h2>
       <h3><img src="" alt="" /><img src="" alt="" />Telecom/Cablevisión</h3>
       <p>Responsabilidades:</p>
@@ -128,10 +133,10 @@
         <li><p>Arquitectura y construcción de proyectos.</p></li>
         <li><p>Scrum Master.</p></li>
       </ul>
-    </section>
+    </section> -->
 
     <!-- Contacto -->
-    <section class="contact" id="contact">
+    <!-- <section class="contact" id="contact">
       <h2>Contacto</h2>
       <form>
         <input type="text" name="" id="" placeholder="Nombre y Apellido" />
@@ -139,10 +144,10 @@
         <input type="text" name="" id="" placeholder="Asunto" />
         <textarea name="" id="" cols="30" rows="1" placeholder="Mensaje"></textarea>
       </form>
-    </section>
+    </section> -->
 
     <!-- Footer -->
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="footer__contariner">
         <a class="footer__brand" href=""><i class="fas fa-balance-scale"></i><b>Nicolás Morales</b></a>
         <ul class="footer__list">
@@ -163,20 +168,38 @@
           </li>
         </ul>
       </div>
-    </footer>
+    </footer> -->
 
-    <!-- Script Splider -->
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script> -->
     <script>
-      new Splide(".splide", {
-        type: "loop",
-        rewind: true,
-        perPage: 1,
-        autoplay: true,
-        height: "35rem",
-        width: "30rem",
-        cover: true,
-      }).mount();
+      // navbar toogle
+      $(function () {
+        $(".navbar-toggle").on("click", function () {
+          if ($(".navbar-item").hasClass("visible")) {
+            $(".navbar-item").removeClass("visible");
+            $(this).find("a").html("<i class='fas fa-bars'></i>");
+          } else {
+            $(".navbar-item").addClass("visible");
+            $(this).find("a").html("<i class='fas fa-times'></i>");
+          }
+        });
+      });
+
+      // slider
+      // new Splide(".splide", {
+      //   type: "loop",
+      //   rewind: true,
+      //   perPage: 1,
+      //   autoplay: true,
+      //   height: "35rem",
+      //   width: "30rem",
+      //   cover: true,
+      // }).mount();
     </script>
   </body>
 </html>
