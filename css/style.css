@@ -66,12 +66,14 @@ a:hover {
 
 .navbar-brand {
   order: 0;
+  margin-right: auto;
   padding: 10px;
   font-size: 1.2rem;
 }
 
 .navbar-toggle {
   order: 1;
+  margin-left: auto;
   padding: 0 10px;
   font-size: 1.5rem;
 }
@@ -209,14 +211,8 @@ a:hover {
     display: block;
     width: auto;
   }
+
   .navbar-toggle {
     display: none;
-  }
-  .navbar-brand {
-    order: 0;
-  }
-  .navbar-item {
-    order: 1;
-    padding: 15px 10px;
   }
 }
