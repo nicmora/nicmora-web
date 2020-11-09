@@ -47,6 +47,11 @@ a:hover {
   max-width: 960px;
 }
 
+.section-title {
+  margin: 16px 0;
+  text-align: center;
+}
+
 /********** Navigation **********/
 
 .navbar {
@@ -151,8 +156,48 @@ a:hover {
 
 /* Projects */
 
-.projects {
+/* .projects {
   height: 100vh;
+} */
+
+.card-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  border: 1px solid black;
+  border-radius: 16px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #ffffff;
+  max-width: 250px;
+  max-height: 350px;
+}
+
+.card-title {
+}
+
+.card-subtitle {
+}
+
+.card-picture {
+  align-self: center;
+  margin: 16px 0;
+}
+
+.card-desc {
+  font-size: 12px;
+}
+
+.card-btn {
+  align-self: center;
+  margin-top: 16px;
 }
 
 /* Experience */
