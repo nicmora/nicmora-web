@@ -213,44 +213,30 @@ a:hover {
 
 /* Footer */
 
-/* .footer {
-  height: 25vh;
-  background-color: rgba(34, 47, 62, 1);
+.footer {
+  display: block;
+  background-color: #222f3e;
+  color: var(--navbar-txt-color);
 }
 
-.footer__contariner {
-  position: relative;
-  top: 30%;
+.footer-brand {
+  display: block;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+}
+
+.footer-list {
   display: flex;
-  flex-flow: column nowrap;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
 
-.footer__brand {
-  color: var(--header-txt-color);
-  font-size: 3rem;
+.footer-item {
+  font-size: 35px;
+  padding: 10px;
 }
-
-.footer__brand > b {
-  padding-left: 10px;
-}
-
-.footer__list {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-items: center;
-}
-
-.footer__item {
-  padding: 20px;
-}
-
-.footer__item > a {
-  color: var(--header-txt-color);
-  font-size: 3rem;
-} */
 
 /* Tablet menu */
 /* @media all and (min-width: 600px) {} */
